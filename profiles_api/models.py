@@ -24,10 +24,6 @@ class UserProfileManger(BaseUserManager):
         user.save(using=self._db)# it is a standard for saving objects in django
         return user
 
-
-
-
-
 class UserProfile(AbstractBaseUser,PermissionsMixin):
     """Database model for users in the system"""
     email=models.EmailField(max_length=255,unique=True)
